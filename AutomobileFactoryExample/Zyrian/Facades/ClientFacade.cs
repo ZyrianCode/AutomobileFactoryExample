@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using AutomobileFactory.Zyrian.AutomobileFactories.AutomobileCreationFactory.AbstractParts;
 using BaseTypes.MainBaseTypes;
+using Entities.AbstractParts.AutomobilesTypes;
 using Zyrian.Utils.PrintUtils.Printers;
 using Zyrian.Utils.PrintUtils.PrintMethods;
 
@@ -49,6 +50,5 @@ namespace AutomobileFactoryExample.Zyrian.Facades
             _printFacade.FillObjectsToPrint(_uncommonAutomobile);
             _printFacade.Print(new DataPrinter<IBaseType>(), new ConsolePrintMethod<IBaseType>());
         }
-
     }
 }
