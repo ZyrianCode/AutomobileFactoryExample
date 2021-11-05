@@ -2,7 +2,8 @@
 using AutomobileFactory.Zyrian.AutomobileFactories.AutomobileCreationFactory.MainAbstractParts;
 
 using BaseTypes.MainBaseTypes;
-using Entities.AbstractParts.AutomobilesTypes;
+using CreationConfigurators.Zyrian.Templates;
+using Entities.Automobiles.AutomobileConstruction.AbstractParts.AutomobilesTypes;
 
 namespace AutomobileFactory.Zyrian.AutomobileFactories.AutomobileCreationFactory.AbstractParts
 {
@@ -16,9 +17,10 @@ namespace AutomobileFactory.Zyrian.AutomobileFactories.AutomobileCreationFactory
     public interface ICommonAutomobileFactory : IAutomobileCreationFactory, IBaseType
     {
         /// <summary>
-        /// Создаёт продукт обычного автомобиля.
+        /// Создаёт продукт обычного автомобиля по шаблону.
         /// </summary>
-        /// <returns>Экземпляр <see cref="ICommonAutomobile"/>. </returns>
-        public ICommonAutomobile CreateProduct();
+        /// <param name="template"> шаблон для создания автомобиля </param>
+        /// <returns> Экземпляр <see cref="ICommonAutomobile"/>. </returns>
+        public ICommonAutomobile CreateProduct(ConfigurationTemplate template);
     }
 }

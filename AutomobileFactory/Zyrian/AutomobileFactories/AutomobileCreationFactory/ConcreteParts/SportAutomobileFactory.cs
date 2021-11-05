@@ -7,17 +7,16 @@ using Entities.Automobiles.AutomobileConstruction.ConcreteParts;
 namespace AutomobileFactory.Zyrian.AutomobileFactories.AutomobileCreationFactory.ConcreteParts
 {
     /// <summary>
-    /// Фабрика обычных автомобилей.
+    /// Фабрика необычных автомобилей.
     /// </summary>
-    /// <remarks>
-    /// Реализует <see cref="ICommonAutomobileFactory"/>.
-    ///     <para> Создаёт обычные автомобили. </para>
+    /// <remarks> Реализует <see cref="ISportAutomobileFactory"/>.
+    ///     <para> Создаёт необычные автомобили. </para>
     ///     <para> Паттерн: Abstract Factory. </para>
     /// </remarks>
-    public class CommonAutomobileFactory : ICommonAutomobileFactory
+    public class SportAutomobileFactory : ISportAutomobileFactory
     {
-        public ICommonAutomobile CreateProduct(ConfigurationTemplate template) =>
-            new AutomobileConfigurationFacade<CommonCar>()
-                .ProduceAutomobile(template) as ICommonAutomobile;
+        public ISportAutomobile CreateProduct(ConfigurationTemplate template) =>
+            new AutomobileConfigurationFacade<SportCar>()
+                .ProduceAutomobile(template) as ISportAutomobile;
     }
 }

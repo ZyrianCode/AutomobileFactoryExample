@@ -12,8 +12,8 @@ namespace AutomobileFactoryExample
             ICommonAutomobileFactory commonAutomobileFactory =
                 new CommonAutomobileFactory();
 
-            IUncommonAutomobileFactory uncommonAutomobileFactory =
-                new UncommonAutomobileFactory();
+            ISportAutomobileFactory uncommonAutomobileFactory =
+                new SportAutomobileFactory();
 
             ClientFacade clientFacade = new();
             clientFacade.ProduceCommonProducts(commonAutomobileFactory);

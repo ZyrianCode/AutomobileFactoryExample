@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CreationConfigurators\CreationConfigurators.csproj" />
+    <ProjectReference Include="..\AutomobilePartsWarehouse\AutomobilePartsWarehouse.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
-    <ProjectReference Include="..\Zyrian.Utils\Zyrian.Utils.csproj" />
+    <ProjectReference Include="..\InputHelpers\InputHelpers.csproj" />
   </ItemGroup>
 
 </Project>
